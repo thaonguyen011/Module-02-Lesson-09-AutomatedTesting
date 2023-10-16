@@ -43,9 +43,30 @@ class FizzBuzzTest01 {
     @Test
     void convertNumberToWord05() {
         int number = 34;
-        String expected = "three four ";
+        String expected = "Fizz four ";
 
         String result = FizzBuzz.convertNumberToWord(number);
         assertEquals(expected, result);
     }
+
+    @Test
+    void convertNumberToWord06() {
+        int number = 54;
+        String expected = "Buzz four ";
+
+        String result = FizzBuzz.convertNumberToWord(number);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void convertNumberToWord07() {
+        int number = 53;
+        String expected = "Buzz Fizz ";
+
+        String result = FizzBuzz.convertNumberToWord(number);
+        assertEquals(expected, result);
+    }
+
+
+
 }

@@ -26,7 +26,10 @@ public class FizzBuzz {
 
         if (isPositiveInteger(number) && number < 100) {
             for (int i = 0; i < numberString.length(); i++) {
-                result.append(convertANumberToWord(Integer.parseInt(String.valueOf(numberString.charAt(i))))).append(" ");
+                int x = Integer.parseInt(String.valueOf(numberString.charAt(i)));
+
+                if (x == 3 || x == 5) result.append(fizzBuzzTranslate(x)).append(" ");
+                else result.append(convertANumberToWord(x)).append(" ");
             }
             return result.toString();
         } else throw new RuntimeException("Not a positive number or number is larger than 100");
